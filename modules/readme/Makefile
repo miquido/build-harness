@@ -3,10 +3,11 @@ export README_FILE ?= README.md
 export README_YAML ?= README.yaml
 
 export README_TEMPLATE_REPO_ORG ?= $(shell [ -f "$(README_YAML)" ] &&  dirname $$(grep '^github_repo: *' "$(README_YAML)" | tr -d \'\" | cut -d: -f2))
-export README_TEMPLATE_REPO ?= .github
 export README_TEMPLATE_REPO_REF ?= main
 # Changed for Miquido org
 export README_TEMPLATE_REPO_PATH ?= README-Miquido.md.gotmpl
+export README_TEMPLATE_REPO ?= build-harness
+
 export README_TEMPLATE_REPO_URL := https://raw.githubusercontent.com/$(README_TEMPLATE_REPO_ORG)/$(README_TEMPLATE_REPO)/$(README_TEMPLATE_REPO_REF)/$(README_TEMPLATE_REPO_PATH)
 export README_TEMPLATE_REMOTE_FILE ?= $(BUILD_HARNESS_PATH)/templates/README.md.gotmpl
 export README_TEMPLATE_FILE ?= $(README_TEMPLATE_REMOTE_FILE)
