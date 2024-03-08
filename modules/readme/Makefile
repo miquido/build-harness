@@ -3,8 +3,8 @@ export README_FILE ?= README.md
 export README_YAML ?= README.yaml
 
 export README_TEMPLATE_REPO_ORG ?= $(shell [ -f "$(README_YAML)" ] &&  dirname $$(grep '^github_repo: *' "$(README_YAML)" | tr -d \'\" | cut -d: -f2))
-export README_TEMPLATE_REPO_REF ?= master
 # Changed for Miquido org
+export README_TEMPLATE_REPO_REF ?= master
 export README_TEMPLATE_REPO_PATH ?= README-Miquido.md.gotmpl
 export README_TEMPLATE_REPO ?= build-harness
 
